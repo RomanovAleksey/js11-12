@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS 11-12</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/slider.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="carousel">
+			<div class="carousel-arrow-left"><span>Влево</span></div>
+			<div class="carousel-hider">
+				<ul class="carousel-list">
+				    <li class="carousel-element"><img src="img/image1.jpg"><p>Описание 1</p></li>
+				    <li class="carousel-element"><img src="img/image2.jpg"><p>Описание 2</p></li>
+				    <li class="carousel-element"><img src="img/image3.jpg"><p>Описание 3</p></li>
+				    <li class="carousel-element"><img src="img/image4.jpg"><p>Описание 4</p></li>
+				    <li class="carousel-element"><img src="img/image1.jpg"><p>Описание 5</p></li>
+				    <li class="carousel-element"><img src="img/image2.jpg"><p>Описание 6</p></li>
+				    <li class="carousel-element"><img src="img/image3.jpg"><p>Описание 7</p></li>
+				    <li class="carousel-element"><img src="img/image4.jpg"><p>Описание 8</p></li>
+				    <li class="carousel-element"><img src="img/image1.jpg"><p>Описание 9</p></li>
+				    <li class="carousel-element"><img src="img/image2.jpg"><p>Описание 10</p></li>
+				    <li class="carousel-element"><img src="img/image3.jpg"><p>Описание 11</p></li>
+				    <li class="carousel-element"><img src="img/image4.jpg"><p>Описание 12</p></li>
+				 </ul>
+			</div>
+			<div class="carousel-arrow-right"><span>Вправо</span></div>
+		</div>
+		<hr>
+		<hr>
+		<hr>
+		<hr>
+
+	</div>
+
+
+	<script type="text/html" id="resume">
+		
+		<div class="content">
+			<div class="my-info">
+			
+				<h3><%= data[0].name %></h3>
+				<img src="img/jvHEBGz4Lo0.jpg" alt="Я" width="145" height="145">
+				<p><%= data[0].profision %></p>
+			</div>
+			<hr>
+			<div class="my-desire">
+				<p><%= data[0].desire[0].title %></p>
+				<ul>
+				<% for (var i = 0; i < data[0].desire[0].content.length; i++) { %>
+					<li><%= data[0].desire[0].content[i].title %></li>
+				<% } %>	
+				</ul>
+				
+			</div>
+			<hr>
+			<div class="my-number">
+				<p><%= data[0].title %><br><%= data[0].number %></p>
+			</div>
+			<div class="my-vk">
+				<p><%= data[0].page %> <br> <a href="https://vk.com/id12890852">vk.com</a></p>
+			</div>
+			<hr>
+			<div class="my-feedback">
+				<p><%= data[0].myFeedback %></p>
+				<p><%= data[0].feedback %></p>
+			</div>
+		</div>
+	
+	</div>
+
+	</script>
+</body>
+</html>
